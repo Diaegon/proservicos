@@ -1109,7 +1109,7 @@ textarea.form-control { min-height: 130px; }
   .nav-menu li { width: 100%; }
   .nav-menu li a { padding: 12px 16px; border-radius: var(--radius); }
   .nav-actions .btn-outline-primary { display: none; }
-
+  .nav-actions .btn-primary { display: none; }
   .hero { min-height: 560px; padding-top: 90px; }
   .hero-stats { gap: 24px; }
   .hero-stat-number { font-size: 1.5rem; }

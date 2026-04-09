@@ -23,11 +23,15 @@
       <nav class="nav-inner">
         <!-- Logo -->
         <a href="/" class="nav-logo">
-          <div class="nav-logo-mark">{{ .Site.Params.logo_mark }}</div>
-          <div class="nav-logo-text">
-            <div class="nav-logo-name">{{ .Site.Title }}</div>
-            <div class="nav-logo-tagline">{{ .Site.Params.logo_tagline }}</div>
-          </div>
+          {{ if .Site.Params.logo }}                                         
+            <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" style="height:150px;width:auto;">                                                   
+             {{ else }}                                                         
+              <div class="nav-logo-mark">{{ .Site.Params.logo_mark }}</div>    
+              <div class="nav-logo-text">                                      
+              <div class="nav-logo-name">{{ .Site.Title }}</div>             
+              <div class="nav-logo-tagline">{{ .Site.Params.logo_tagline }}</div>                                                                         
+              </div>                                                           
+          {{ end }}     
         </a>
 
         <!-- Mobile toggle -->

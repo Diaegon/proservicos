@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sobre Nós on Proserviços Engenharia</title>
-    <link>//localhost:43607/sobre/</link>
+    <link>//localhost:38995/sobre/</link>
     <description>Recent content in Sobre Nós on Proserviços Engenharia</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <atom:link href="//localhost:43607/sobre/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:38995/sobre/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
