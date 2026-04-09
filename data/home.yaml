@@ -1,10 +1,10 @@
 hero:
   badge: "Soluções Industriais & Comerciais"
-  title_line1: "Soluções completas"
-  title_line2: "para o seu"
-  title_highlight: "negócio"
-  subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fornecemos produtos de alta qualidade e serviços especializados para empresas de todos os segmentos, com foco em eficiência e confiança."
-  image: "https://picsum.photos/seed/proservicos-hero/1920/800"
+  title_line1: "Energia confiável"
+  title_line2: "para quem"
+  title_highlight: "não pode parar"
+  subtitle: "Há 15 anos garantindo a operação de grupos geradores e subestações — agora também com soluções em energia solar para reduzir custos e aumentar eficiência."
+  image: "/images/hero-image.jpg"
   button_primary:
     text: "Conheça Nossos Produtos"
     url: "/produtos/"
@@ -12,7 +12,7 @@ hero:
     text: "Solicitar Orçamento"
     url: "/contato/"
   stats:
-    - number: "15+"
+    - number: "15"
       label: "Anos de<br>experiência"
     - number: "1.200+"
       label: "Clientes<br>atendidos"

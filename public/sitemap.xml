@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:33087/categories/</loc>
+    <loc>//localhost:43607/categories/</loc>
   </url><url>
-    <loc>//localhost:33087/contato/</loc>
+    <loc>//localhost:43607/contato/</loc>
   </url><url>
-    <loc>//localhost:33087/</loc>
+    <loc>//localhost:43607/</loc>
   </url><url>
-    <loc>//localhost:33087/produtos/</loc>
+    <loc>//localhost:43607/produtos/</loc>
   </url><url>
-    <loc>//localhost:33087/servicos/</loc>
+    <loc>//localhost:43607/servicos/</loc>
   </url><url>
-    <loc>//localhost:33087/sobre/</loc>
+    <loc>//localhost:43607/sobre/</loc>
   </url><url>
-    <loc>//localhost:33087/tags/</loc>
+    <loc>//localhost:43607/tags/</loc>
   </url>
 </urlset>
