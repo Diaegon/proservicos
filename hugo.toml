@@ -1,6 +1,6 @@
-baseURL = 'https://proservicos.com.br/'
+baseURL = ''
 languageCode = 'pt-BR'
-title = 'Proservicos'
+title = 'Proserviços Engenharia'
 
 [params]
   description = 'Soluções completas para o seu negócio'
