@@ -1,0 +1,159 @@
+{{ define "main" }}
+{{ $d := .Site.Data.home }}
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="hero-bg" style="background-image: url('{{ $d.hero.image }}')"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">{{ $d.hero.badge }}</span>
+      <h1 class="hero-title">
+        {{ $d.hero.title_line1 }}<br>{{ $d.hero.title_line2 }} <span>{{ $d.hero.title_highlight }}</span>
+      </h1>
+      <p class="hero-subtitle">{{ $d.hero.subtitle }}</p>
+      <div class="hero-actions">
+        <a href="{{ $d.hero.button_primary.url }}" class="btn btn-primary btn-lg">{{ $d.hero.button_primary.text }}</a>
+        <a href="{{ $d.hero.button_secondary.url }}" class="btn btn-outline-white btn-lg">{{ $d.hero.button_secondary.text }}</a>
+      </div>
+      <div class="hero-stats">
+        {{ range $d.hero.stats }}
+        <div>
+          <div class="hero-stat-number">{{ .number }}</div>
+          <div class="hero-stat-label">{{ .label | safeHTML }}</div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUTOS EM DESTAQUE
+     ============================================================ -->
+{{ $ps := $d.products_section }}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ $ps.label }}</span>
+      <h2 class="section-title">{{ $ps.title }}</h2>
+      <p class="section-subtitle">{{ $ps.subtitle }}</p>
+    </div>
+
+    <div class="cards-grid">
+      {{ range $ps.items }}
+      <div class="card">
+        <img class="card-img" src="{{ .image }}" alt="{{ .image_alt }}" loading="lazy">
+        <div class="card-body">
+          <span class="card-tag">{{ .tag }}</span>
+          <h3 class="card-title">{{ .title }}</h3>
+          <p class="card-text">{{ .text }}</p>
+          <a href="{{ .link_url }}" class="card-link">Ver produtos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a href="{{ $ps.button_url }}" class="btn btn-outline-primary">{{ $ps.button_text }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVIÇOS
+     ============================================================ -->
+{{ $ss := $d.services_section }}
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ $ss.label }}</span>
+      <h2 class="section-title">{{ $ss.title }}</h2>
+      <p class="section-subtitle">{{ $ss.subtitle }}</p>
+    </div>
+
+    <div class="cards-grid cards-grid-4">
+      {{ range $ss.items }}
+      <div class="service-card">
+        <div class="sc-icon">
+          {{ partial "service-icon" .icon }}
+        </div>
+        <h3 class="sc-title">{{ .title }}</h3>
+        <p class="sc-text">{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a href="{{ $ss.button_url }}" class="btn btn-outline-primary">{{ $ss.button_text }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEGMENTOS ATENDIDOS
+     ============================================================ -->
+{{ $sec := $d.sectors_section }}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ $sec.label }}</span>
+      <h2 class="section-title">{{ $sec.title }}</h2>
+      <p class="section-subtitle">{{ $sec.subtitle }}</p>
+    </div>
+
+    <div class="cards-grid">
+      {{ range $sec.items }}
+      <div class="sector-card">
+        <div class="sector-icon" style="font-size:1.8rem">{{ .icon }}</div>
+        <div class="sector-name">{{ .name }}</div>
+        <p class="sector-desc">{{ .desc }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIFERENCIAIS
+     ============================================================ -->
+{{ $df := $d.differentials_section }}
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ $df.label }}</span>
+      <h2 class="section-title">{{ $df.title }}</h2>
+      <p class="section-subtitle">{{ $df.subtitle }}</p>
+    </div>
+
+    <div class="cards-grid cards-grid-4">
+      {{ range $df.items }}
+      <div class="dif-card">
+        <div class="dif-number">{{ .number }}</div>
+        <h3 class="dif-title">{{ .title }}</h3>
+        <p class="dif-text">{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA BANNER
+     ============================================================ -->
+{{ $cta := $d.cta_banner }}
+<section class="cta-banner">
+  <div class="container">
+    <h2>{{ $cta.title }}</h2>
+    <p>{{ $cta.text }}</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="{{ $cta.button_primary.url }}" class="btn btn-outline-white btn-lg">{{ $cta.button_primary.text }}</a>
+      <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="btn btn-lg" style="background:var(--white);color:var(--accent);border:2px solid var(--white);" target="_blank" rel="noopener">{{ $cta.button_whatsapp }}</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

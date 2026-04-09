@@ -1,0 +1,105 @@
+{{ define "main" }}
+{{ $d := .Site.Data.sobre }}
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ $d.hero.title }}</h1>
+    <p>{{ $d.hero.subtitle }}</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>›</span>
+      <span>Sobre Nós</span>
+    </div>
+  </div>
+</section>
+
+<!-- Historia -->
+{{ $h := $d.history }}
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <img src="{{ $h.image }}" alt="{{ $h.image_alt }}" style="width:100%;border-radius:14px;">
+        <div class="about-image-badge">
+          <div class="aib-number">{{ $h.badge_number }}</div>
+          <div class="aib-label">{{ $h.badge_label | safeHTML }}</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">{{ $h.label }}</span>
+        <h2>{{ $h.title }}</h2>
+        {{ range $h.paragraphs }}<p>{{ . }}</p>{{ end }}
+        <div style="margin-top:28px;">
+          <a href="{{ $h.button_url }}" class="btn btn-primary">{{ $h.button_text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Números -->
+{{ $st := $d.stats_section }}
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ $st.label }}</span>
+      <h2 class="section-title">{{ $st.title }}</h2>
+    </div>
+    <div class="cards-grid cards-grid-4">
+      {{ range $st.items }}
+      <div style="text-align:center;padding:32px 20px;background:var(--white);border-radius:14px;box-shadow:var(--shadow);border:1px solid var(--gray-200);">
+        <div style="font-size:3rem;font-weight:800;color:var(--primary);line-height:1;">{{ .number }}<span style="color:var(--accent)">{{ .suffix }}</span></div>
+        <div style="font-size:.95rem;color:var(--text-muted);margin-top:8px;font-weight:500;">{{ .label }}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Missão, Visão, Valores -->
+{{ $v := $d.values_section }}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ $v.label }}</span>
+      <h2 class="section-title">{{ $v.title }}</h2>
+      <p class="section-subtitle">{{ $v.subtitle }}</p>
+    </div>
+    <div class="values-grid">
+      {{ range $v.items }}
+      <div class="value-card">
+        <span class="vc-icon">{{ .icon }}</span>
+        <h3 class="vc-title">{{ .title }}</h3>
+        <p class="vc-text">{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Equipe -->
+{{ $t := $d.team_section }}
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">{{ $t.label }}</span>
+      <h2 class="section-title">{{ $t.title }}</h2>
+      <p class="section-subtitle">{{ $t.subtitle }}</p>
+    </div>
+    <div class="cards-grid cards-grid-4">
+      {{ range $t.members }}
+      <div class="card">
+        <img class="card-img" src="{{ .image }}" alt="{{ .name }}" style="height:240px;object-fit:cover;object-position:top;" loading="lazy">
+        <div class="card-body" style="text-align:center;">
+          <h3 class="card-title" style="margin-bottom:4px;">{{ .name }}</h3>
+          <span class="card-tag">{{ .role }}</span>
+          <p class="card-text" style="margin-top:10px;">{{ .text }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

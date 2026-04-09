@@ -1,0 +1,52 @@
+{{ define "main" }}
+{{ $d := .Site.Data.servicos }}
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ $d.hero.title }}</h1>
+    <p>{{ $d.hero.subtitle }}</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>›</span>
+      <span>Serviços</span>
+    </div>
+  </div>
+</section>
+
+<!-- Services list -->
+<section class="section">
+  <div class="container">
+    {{ range $d.items }}
+    <div class="service-row{{ if .reverse }} reverse{{ end }}">
+      <img class="service-row-img" src="{{ .image }}" alt="{{ .image_alt }}" loading="lazy">
+      <div>
+        <div class="service-row-icon">
+          {{ partial "service-icon" .icon }}
+        </div>
+        <span class="service-row-tag">{{ .tag }}</span>
+        <h2 class="service-row-title">{{ .title }}</h2>
+        {{ range .paragraphs }}<p class="service-row-desc">{{ . }}</p>{{ end }}
+        <ul class="service-features">
+          {{ range .features }}<li class="service-feature">{{ . }}</li>{{ end }}
+        </ul>
+        <div style="margin-top:28px;">
+          <a href="{{ .button_url }}" class="btn btn-primary">{{ .button_text }}</a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- CTA -->
+{{ $cta := $d.cta_banner }}
+<section class="cta-banner">
+  <div class="container">
+    <h2>{{ $cta.title }}</h2>
+    <p>{{ $cta.text }}</p>
+    <a href="{{ $cta.button_url }}" class="btn btn-outline-white btn-lg">{{ $cta.button_text }}</a>
+  </div>
+</section>
+
+{{ end }}

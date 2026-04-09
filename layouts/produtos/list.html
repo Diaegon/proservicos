@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{ $d := .Site.Data.produtos }}
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ $d.hero.title }}</h1>
+    <p>{{ $d.hero.subtitle }}</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>›</span>
+      <span>Produtos</span>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filters -->
+    <div class="product-filters">
+      {{ range $d.filters }}
+      <button class="filter-btn{{ if eq . "Todos" }} active{{ end }}">{{ . }}</button>
+      {{ end }}
+    </div>
+
+    <!-- Grid -->
+    <div class="cards-grid" style="grid-template-columns: repeat(3, 1fr);">
+      {{ range $d.items }}
+      <div class="product-card">
+        <img class="product-card-img" src="{{ .image }}" alt="{{ .image_alt }}" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag">{{ .tag }}</span>
+          <h3 class="product-card-name">{{ .name }}</h3>
+          <p class="product-card-desc">{{ .desc }}</p>
+          <div class="product-card-footer">
+            <span class="product-card-detail">Cód: {{ .code }}</span>
+            <a href="{{ .cta_url }}" class="product-card-cta">Solicitar orçamento →</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+{{ $cta := $d.cta_banner }}
+<section class="cta-banner">
+  <div class="container">
+    <h2>{{ $cta.title }}</h2>
+    <p>{{ $cta.text }}</p>
+    <a href="{{ $cta.button_url }}" class="btn btn-outline-white btn-lg">{{ $cta.button_text }}</a>
+  </div>
+</section>
+
+{{ end }}
