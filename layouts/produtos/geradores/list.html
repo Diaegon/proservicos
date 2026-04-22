@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $d := .Site.Data.produtos }}
+{{ $d := .Site.Data.geradores }}
 
 <!-- Page Hero -->
 <section class="page-hero">
@@ -36,7 +36,7 @@
           <p class="product-card-desc">{{ .desc }}</p>
           <div class="product-card-footer">
             <span class="product-card-detail">Cód: {{ .code }}</span>
-            <a href="{{ .cta_url }}" class="product-card-cta">Verificar disponibilidade →</a>
+            <a href="{{ .cta_url }}" class="product-card-cta">Solicitar orçamento →</a>
           </div>
         </div>
       </div>

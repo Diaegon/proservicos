@@ -18,7 +18,7 @@ items:
     image: "/images/gerador-transporte.jpg"
     image_alt: "Gerador Industrial"
     code: "PRD-001"
-    cta_url: "/contato/"
+    cta_url: "/produtos/geradores"
   - tag: "Quadros Elétricos"
     name: "Quadros de transferência automatica"
     desc: "Solicite informações sobre nossos quadros de transferência automática disponíveis para locação. Nossos quadros garantem a continuidade do fornecimento de energia, com comutação rápida e segura entre fontes primárias e secundárias, ideais para obras, eventos e situações de emergência."

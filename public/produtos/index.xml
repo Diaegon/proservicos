@@ -2,10 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Produtos on Proserviços Engenharia</title>
-    <link>//localhost:33529/produtos/</link>
+    <link>//localhost:1313/produtos/</link>
     <description>Recent content in Produtos on Proserviços Engenharia</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <atom:link href="//localhost:33529/produtos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/produtos/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

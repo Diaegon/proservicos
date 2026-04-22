@@ -33,7 +33,7 @@ products_section:
       text: "Conheça nosso estoque de geradores de energia para locação, ideais para eventos, obras e emergências. Oferecemos equipamentos confiáveis, eficientes e com suporte técnico especializado para garantir o fornecimento contínuo de energia onde você precisar."
       image: "/images/gerador-transporte.jpg"
       image_alt: "Gerador Industrial"
-      link_url: "/produtos/"
+      link_url: "/produtos/geradores"
     - tag: "Quadros Elétricos"
       title: "Quadros de transferência automática"
       text: "Solicite informações sobre nossos quadros de transferência automática disponíveis para locação. Nossos quadros garantem a continuidade do fornecimento de energia, com comutação rápida e segura entre fontes primárias e secundárias, ideais para obras, eventos e situações de emergência."
