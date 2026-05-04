@@ -13,7 +13,7 @@ form_card:
   text: "Preencha o formulário abaixo e nossa equipe entrará em contato em até 24 horas úteis."
 
 map:
-  image: "/images/sede-image.png"
+  image: "https://pub-44e4ed4bbd164f789c8c97ac80397277.r2.dev/proservicosweb/images/sede-image.png"
   image_alt: "Localização"
   company_label: "Sede"
   maps_url: "https://www.google.com/maps/place/Proserviços/@-3.844402,-38.5725763,17z/data=!3m1!4b1!4m6!3m5!1s0x7c749cb614037ef:0x43cf9ca424dbfa25!8m2!3d-3.844402!4d-38.5725763!16s%2Fg%2F11h3ftwgsw!17m2!4m1!1e3!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQwNy4wIKXMDSoASAFQAw%3D%3D"

@@ -17,7 +17,7 @@ items:
     button_text: "Solicitar Consultoria"
     button_url: "/contato/"
     reverse: false
-    image: "/images/gerador-image.jpg"
+    image: "https://pub-44e4ed4bbd164f789c8c97ac80397277.r2.dev/proservicosweb/images/gerador-image.jpg"
     image_alt: "Manutenção de Geradores e subestações"
   - icon: "manutencao"
     tag: "Projetos e Consultoria"
@@ -32,7 +32,7 @@ items:
     button_text: "Contratar Manutenção"
     button_url: "/contato/"
     reverse: true
-    image: "/images/gerador-image3.jpg"
+    image: "https://pub-44e4ed4bbd164f789c8c97ac80397277.r2.dev/proservicosweb/images/gerador-image3.jpg"
     image_alt: "Projetos e Consultoria Técnica"
   - icon: "instalacao"
     tag: "Laudos e Instalação"
@@ -48,7 +48,7 @@ items:
     button_text: "Solicitar Instalação"
     button_url: "/contato/"
     reverse: false
-    image: "/images/QTA-image2.jpg"
+    image: "https://pub-44e4ed4bbd164f789c8c97ac80397277.r2.dev/proservicosweb/images/QTA-image2.jpg"
     image_alt: "Instalação e Montagem"
   - icon: "treinamento"
     tag: "Renováveis"
@@ -64,7 +64,7 @@ items:
     button_text: "Solicitar Orçamento"
     button_url: "/contato/"
     reverse: true
-    image: "/images/solar-image.jpeg"
+    image: "https://pub-44e4ed4bbd164f789c8c97ac80397277.r2.dev/proservicosweb/images/solar-image.jpeg"
     image_alt: "Treinamento e Capacitação"
   - icon: "locacao"
     tag: "Locação"
@@ -79,7 +79,7 @@ items:
     button_text: "Solicitar Locação"
     button_url: "/contato/"
     reverse: false
-    image: "/images/gerador-image2.jpg"
+    image: "https://pub-44e4ed4bbd164f789c8c97ac80397277.r2.dev/proservicosweb/images/gerador-image2.jpg"
     image_alt: "Locação de Equipamentos"
 
 cta_banner:
