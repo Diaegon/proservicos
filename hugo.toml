@@ -17,9 +17,7 @@ title = 'Proserviços Engenharia'
   footer_desc = 'Há 15 anos oferecemos soluções completas em geradores, subestações, manutenções corretivas e preventivas . Confiança, qualidade e compromisso com o seu sucesso.'
 
 [params.social]
-  facebook = '#'
   instagram = 'https://www.instagram.com/proservicos_geradores'
-  linkedin = '#'
 
 [[menus.main]]
   name = 'Home'
